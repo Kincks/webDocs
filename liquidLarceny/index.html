@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Liquid Larceny</title>
+        <style>
+            
+            /*THIS REMOVES DEFAULT MARGINS AND SETS FONT*/
+            * body {
+                margin: 0;
+                padding: 0;
+                font-family: serif;
+            }
+            
+            /*LINK STYLING*/
+            a:link {
+                text-decoration: none;
+                cursor: help;
+                color: #ff9900;
+            }
+            a:visited {
+                color: #ff9966;
+            }
+            
+            /*HEADER STYLING*/
+            header {
+                text-align: right;
+                margin: 5%;
+                padding-top: 9.5%;
+            }
+            h1 { 
+                font-size: 5vw;
+            }
+            h3 {
+                margin-top: -3%;
+                margin-bottom: 12%;
+                font-size: 3vw;
+            }
+            #headerimg {
+                width: 80%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            
+            /*BODY TEXT SECTION STYLING*/
+            section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            h2 {
+                color: #336699;
+                margin-bottom: 0;
+                font-size: 30px;
+            }
+            p {
+                font-size: 18px;
+            }
+            
+            /*IMAGE BARS W/ NO SCROLLING*/
+            .parallax {
+                width: 100%;
+                height: 300px;
+                position: relative;
+                text-align: center;
+                background-color: #336699;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .parallax h4 {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 30px;
+                color: #ffffff;
+            }
+            
+            /*IMAGE-BARS W/ SCROLLING*/
+            .imagebar {
+                width: 100%;
+                height: 300px;
+                background-color: #336699;
+                position: relative;
+                text-align: center;
+            }
+            .imagebar h4 {
+                text-align: center;
+                margin: 0;
+                bottom: 0;
+                font-size: 30px;
+                color: #ffffff;
+            }
+            
+            /*THREE COLUMNS*/
+            .threecolumn {
+                float: left;
+                width: 33.33%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+            .threecolumn h4 {
+                position: absolute;
+                bottom: 20px;
+                width: 33.3%;
+                z-index: 2;
+            }
+            
+            /*ALIGNS YOUTUBE VIDO*/
+            iframe {
+                margin-left: 5%;
+            }
+            
+            /*FOOTER STYLING*/
+            footer {
+                padding-left: 5%;
+                position: relative;
+            }
+            ul {
+                margin-left: -20px;
+                line-height: 1.5;
+            }
+            .container {
+                position: relative;
+            }
+            #footerimg {
+                width: 40%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+            }
+            
+        </style>    
+    </head>
+    <body>
+        
+        <header>
+            <img id= "headerimg"
+                 src="images/splashpixabay.png"
+                 alt="Splashing water from top left corner of the page.">
+            <h1>30 - 50% of Earth's<br> 
+                Fresh Water Supply is<br>
+                Stolen Every Year</h1>
+            <h3>according to a recent study<br> in <a href="https://www.nature.com/articles/s41893-020-0589-3"><em>Nature Sustainability</em></a></h3>
+        </header>
+        
+        <section>
+            <h2>What is water theft?</h2>
+            <p>Seems odd, but water is one of our most precious resources. A huge amount of fresh water goes missing yearly, which means that every year it's being taken without anyone paying  or accounting for it. This can lead to water shortages and devestates local ecosystems. It's unsustainable.</p>
+        </section>
+        
+        <div class="parallax"
+             style="background-image: url('images/wateringholepixabay.jpg');opacity:0.7;"
+             alt="Animals at a watering hole.">
+            <h4>all living things depend on water</h4>
+        </div>
+        
+        <section>
+            <h2>Why are people taking water?</h2>
+            <p>Water is a shared resource being stressed by a growing population. Climate change has increased water scarcity and its distribution isn't well-managed. Current regulations are insufficient and enforcement rare.
+            </p>
+        </section>
+        
+        <div class="imagebar">
+            <div class="threecolumn"
+                 style="background-image:url('images/polarbearpixabay.jpg')"
+                 alt="A polar bear on melting sea ice.">
+                <h4>climate change</h4>
+            </div>
+            <div class="threecolumn"
+                 style="background-image:url('images/crackedearthpixabay.jpg')"
+                 alt="Cracked, drought-stricken ground.">
+                <img><h4>water insecurity</h4>
+            </div>
+            <div class="threecolumn"
+                 style="background-image:url('images/ladyjusticepixabay.jpg')"
+                 alt="A Statue Of Lady Justice.">
+                <h4>lack of regulation</h4>
+            </div>
+        </div>
+        
+        <section>
+            <h2>Where is the water going?</h2>
+            <p>Most of the stolen water is used for agricultural purposes. Some corporations take water and only pay for a fraction of what they use.</p>
+        </section>
+        
+        <div class="imagebar">
+            <div class="threecolumn"
+                 style="background-image:url('images/irrigationpixabay.jpg')"
+                 alt="Crops being irrigated by an industrial sprinkler.">
+                <h4>agriculture</h4>
+            </div>
+            <div class="threecolumn"
+                style="background-image:url('images/drinkingcowspixabay.jpg')"
+                alt="Five cows around a water trough.">
+                <h4>livestock</h4>
+                
+            </div>
+            <div class="threecolumn"
+                 style="background-image:url('images/officebuildingsunsplash.jpg')"
+                 alt="Dark, imposing office buildings.">
+                <h4>corporations</h4>
+            </div>
+        </div>
+        
+        <section>
+            <h2>Who owns the water?</h2>
+            <p>Are we going to treat water as a basic human right or a commodity? Water rights need to be defined and compliance with regulations enforced.</p>
+        </section>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xr6SB_OX3Us" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <footer>
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://www.weforum.org/agenda/2020/09/global-water-theft-report-agriculture/">World Economic Forum</a></li>
+                <li><a href="https://www.brookings.edu/research/water-theft-and-water-smuggling/">Brookings Institute</a></li>
+                <li><a href="https://phys.org/news/2020-08-method-drivers-theft.html">Phys.org</a></li>
+                <li><a href="https://pixabay.com">Pixabay</a></li>
+                <li><a href="https://unsplash.com">Unsplash</a></li>
+                <li><a href="https://www.w3schools.com">w3schools</a></li>
+            </ul>
+            <div class="container">
+                <img id="footerimg"
+                src="images/splashdropletpixabay.png">
+            </div>
+        </footer>
+    </body>
+</html>
