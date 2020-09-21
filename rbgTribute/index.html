@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+        <title>A Memorial to R.B.G.</title>
+        <style>
+            * body {
+                margin: 0;
+                padding: 0;
+                background-color: #1D1D1D;
+                color: #FFFFFF;
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            /*HEADER STYLING*/
+            header {
+                margin: auto;
+                text-align: center;
+            }
+            h1, h2, h3 {
+                margin: 0;
+                letter-spacing: .1em;
+                font-family: 'Playfair Display', serif;
+            }
+            h1 {
+                font-size: 7vw;
+                font-variant-caps: small-caps;
+                margin-top: -5%;
+            }
+            .dates {
+                font-size: 3.5vw;
+                font-family: 'Roboto', sans-serif;
+                margin-bottom: 3%;
+            }
+            
+            /*QUOTE STYLING*/
+            #champion {
+                color: #1D1D1D;
+                text-align: center;
+                margin: auto;
+                width: 77%;
+                height: 14px;
+                font-size: 11px;
+                line-height: 1;
+                /*Gradient made with https://cssgradient.io*/
+                background: rgb(255,255,255);
+                background: -moz-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(29,29,29,0) 100%);
+                background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(29,29,29,0) 100%);
+                background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(29,29,29,0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#1d1d1d",GradientType=1);
+            }
+            .quotes {
+                width: 77%;
+                margin: auto;
+                font-size: 20px;
+                line-height: 1.3;
+            }
+            .quotes p {
+                cursor: pointer;
+                padding:10px 0 0;
+                text-align: justify;
+            }
+            
+            /*FOOTER STYLING*/
+            footer {
+                text-align: center;
+                margin: auto;
+                padding-top: 10px;
+                width: 77%;
+                line-height: 1.5;
+                font-family: 'Playfair Display', serif;
+            }
+            
+            /*LINK STYLING*/
+            a {
+                color:#FFFFFF;
+                text-decoration: none;
+                font-style: italic;
+            }
+            a:visited {
+                color:#CCCCCC;
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img srcset="img/classyrbg480.jpg 480w, img/classyrbg960.jpg 960w, img/classyrbg1280.jpg 1280w"
+                 sizes="(min-width: 1280px) 1280px, (min-width: 960px) 960px, 480px"
+                 src="img/classyrbg1280.jpg"
+                 alt="A photo portrait of Ruth Bader Ginsburg in her court robes, leaning her face on her finger tips while wearing a black fishnet glove and white fishnet collar.">
+            <h1>Ruth Bader Ginsburg</h1>
+            <h2 class="dates">March 15, 1933 &mdash; September 18, 2020</h2>
+        </header>
+        <div id="champion">
+            <h3>CHAMPION OF WOMEN'S RIGHTS</h3>
+        </div>
+        <div class="quotes">
+            <audio id='clip1'><source src="audio/rbgclip1.ogg" type="audio/ogg"><source src="audio/rbgclip1.mp3" type="audio/mpeg"></audio>
+            <p onclick="playAudio('clip1')">&#9658; "Men and women are persons of equal dignity and they should count equally before the law."</p>
+            <audio id="clip1" src="audio/rbg1.mp3"></audio>
+            
+            <audio id='clip2'><source src="audio/rbgclip2.ogg" type="audio/ogg"><source src="audio/rbgclip2.mp3" type="audio/mpeg"></audio>
+            <p onclick="playAudio('clip2')">&#9658; "It was difficult even into the middle seventies to persuade judges&mdash;who at that time were overwhelmingly male and white&mdash;to persuade them that there was such a thing as discrimination against women, because their idea was women are on a pedastal; women are protected by the law. And many women were finding out that these so-called protections were protecting men's jobs from women's competition."
+            </p>
+            
+            <audio id='clip3'><source src="audio/rbgclip3.ogg" type="audio/ogg"><source src="audio/rbgclip3.mp3" type="audio/mpeg"></audio>
+            <p onclick="playAudio('clip3')">&#9658; "The court does not comprehend or is indifferent to the insidious way in which women can be victims of pay discrimination."</p>
+            
+            <audio id='clip4'><source src="audio/rbgclip4.ogg" type="audio/ogg"><source src="audio/rbgclip4.mp3" type="audio/mpeg"></audio>
+            <p onclick="playAudio('clip4')">&#9658; "We wanted to say that the law should not pigeon-hole people, that men or women should be able to do whatever his or her talents made right for that person."
+            </p>
+            
+            <audio id='clip5'><source src="audio/rbgclip5.ogg" type="audio/ogg"><source src="audio/rbgclip5.mp3" type="audio/mpeg"></audio>
+            <p onclick="playAudio('clip5')">&#9658; "Never [react] in anger, as my mother told me. That would have been self-defeating. Always as an opportunity to teach. I did see myself as kind of a kindergarden teacher in those days because the judges didn't think sex discrimination existed. Well, one of the things I tried to plant in their minds was 'think about how you would like the world to be for your daughters and grand daughters.'"</p>
+            
+            <audio id='clip6'><source src="audio/rbgclip6.ogg" type="audio/ogg"><source src="audio/rbgclip6.mp3" type="audio/mpeg"></audio>
+            <p onclick="playAudio('clip6')">&#9658; "People ask me: 'When will you be satisfied with the number of women on the court?' When there are nine! For most of the country's history they were all white men."</p>
+        </div>
+        <footer>
+            <p>Photo: <a href="https://www.newyorker.com/news/postscript/ruth-bader-ginsburg-supreme-court-the-great-equalizer-obituary">Sebastian Kim for The New Yorker</a><br>
+            Audio: <a href="https://youtu.be/ORfa5OvZITg">ABC News</a>,
+            <a href="https://youtu.be/dbEui7DSBCY">CBS Sunday Morning <sup>1</sup></a>,
+            <a href="https://youtu.be/FUlhXbRgBG4">CBS Sunday Morning <sup>2</sup></a>, <a href="https://youtu.be/Qbk8Z110M1o">National Portrait Gallery</a></p>
+        </footer>
+        <script>
+        var lastPlayedAutio;
+    // https://www.w3schools.com/jsref/met_audio_play.asp to get it to play when clicked, then Brian helped me get it to start over if it's clicked again or stop it if another clip is played.
+        function playAudio(aud) {
+            if( lastPlayedAutio != null) {
+                lastPlayedAutio.pause();
+            }
+            lastPlayedAutio = document.getElementById(aud);
+            lastPlayedAutio.currentTime = 0;
+            lastPlayedAutio.play();
+        }
+        </script>
+    </body>
+</html>
