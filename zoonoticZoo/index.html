@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Flavors&family=Rock+Salt&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="flickity.css" media="screen">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="script/flickity.pkgd.js"></script>
+    <title>Zoonotic Zoo</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Zoonotic Zoo</h1>
+            <img class="microicon" src="img/viroscope.png" alt="Microscope icon">
+            <p>The world's only microbe zoo, made possible by our electron microscope overlay technology!</p>
+        </header>
+        
+        <div class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false }'>
+            
+            <div class="carousel-cell">
+                <div class="zfact">
+                    <p><span class="define">zoonosis</span> <em>noun</em><br>
+                    /z&#333;-on-ne-sis/ or /z&#333;-uh-n&#333;-sis/<br>
+                    : an infection or disease that is transmissible from animals to humans under natural conditions
+                    <p style="text-align: right;"><a class="link" target="_blank" href="https://www.merriam-webster.com/dictionary/zoonosis">Merriam-Webster</a></p>
+                </div>
+            </div>
+            
+            <div class="carousel-cell">
+                <div class="zfact">
+                    <p style="float: left; width: 50%;"><span class="define">zoonoses</span> <em>plural</em><br>
+                    /z&#333;-on-ne-s&#275;z/<br>
+                    /z&#333;-uh-n&#333;-s&#275;z/</p>
+                    <p style="float: left; width: 50%;"><span class="define">zoonotic</span>
+                    <em>adjective</em><br>
+                    /z&#333;-uh-not-ick/
+                    </p>
+                    <p style="text-align: right;"><a class="link" target="_blank" href="https://www.merriam-webster.com/dictionary/zoonosis">Merriam-Webster</a></p>
+                </div>
+            </div>
+                
+            <div class="carousel-cell">
+                <div class="zfact">
+                    <p>Scientists estimate that more than <strong>6 out of every 10</strong> known infectious diseases in people can be spread from animals, and <strong>3 out of every 4</strong> new or emerging infectious diseases in people come from animals.</p>
+                    <p style="text-align: right;"><a class="link" target="_blank" href="https://www.cdc.gov/onehealth/basics/zoonotic-diseases.html">CDC</a></p>
+                </div>
+            </div>
+            
+            <div class="carousel-cell">
+                <div class="zfact">
+                    <p>The use of antibiotics in animals raised for food is widespread and increases the potential for drug-resistant strains of zoonotic pathogens capable of spreading quickly in animal and human populations.</p>
+                    <p style="text-align: right;"><a class="link" target="_blank" href="https://www.who.int/news-room/fact-sheets/detail/zoonoses">WHO</a></p>
+                </div>
+            </div>
+            
+            <div class="carousel-cell">
+                <div class="zfact">
+                    <p>Urbanization and the destruction of natural habitats increase the risk of zoonotic diseases by increasing contact between humans and wild animals.</p>
+                    <p style="text-align: right;"><a class="link" target="_blank" href="https://www.who.int/news-room/fact-sheets/detail/zoonoses">WHO</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Meet Our Residents</h2>
+        
+        <div id="list">
+            <a href="covid.html"><div class="lslide">
+                <img class="iconl" src="img/covidMicrobeL.gif" style="transform: scaleX(-1);">
+                <h2>Corona Virus <span style="word-break:keep-all;">(Covid-19)</span></h2>
+                <p><strong style="color:red;">NEW!</strong> The recent zoonotic virus taking the world by storm. <span id="etext">It's super contagious and super popular!</span></p>
+            </div></a>
+            
+            <br>
+            <a href="rabies.html"><div class="rslide">
+                <img class="iconr" src="img/covidMicrobeL.gif"
+                     style="transform: scaleY(-1);">
+                <h2>Rabies</h2>
+                <p>A long-term classic. Near 100% fatality rate if not treated right away.</p>
+            </div></a>
+            
+            <br>
+            <a href="influenza.html"><div class="lslide">
+                <img class="iconl" src="img/covidMicrobeL.gif">
+                <h2>Swine Flu</h2>
+                <p>A familiar virus that often comes from familiar animals.</p>
+            </div></a>
+            
+            <br>
+            <a href="ebola.html"><div class="rslide">
+                <img class="iconr" src="img/covidMicrobeL.gif" style="transform: scaleY(1);">
+                <h2>Ebola</h2>
+                <p>Very deadly, but requires contact with bodyfluids to spread.</p>
+            </div></a>
+            
+            <br>
+            <a href="wnv.html"><div class="lslide">
+                <img class="iconl" src="img/covidMicrobeL.gif" style="transform: scale(-1);">
+                <h2>West Nile Virus</h2>
+                <p>No longer a middle east exclusive.</p>
+            </div></a>
+            <br>
+            <a href="lyme.html"><div class="rslide">
+                <img class="iconr" src="img/covidMicrobeL.gif"
+                     style="transform: scale(-1);">
+                <h2>Lyme Disease</h2>
+                <p>Ticks love climate change, so does this spirochete.</p>
+            </div></a>
+        </div>
+        
+        <div class="clearfix">
+            <h2 style="text-align: right;">Petting Zoo coming soon!</h2>
+        </div>
+    </div>
+    
+        <footer>
+            <p>Audrey Hufsmith &copy; 2020 - 2021</p>
+        </footer>
+</body>
+</html>

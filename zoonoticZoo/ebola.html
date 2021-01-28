@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Flavors&family=Rock+Salt&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Zoonotic Zoo: Ebola</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html"><h1>Zoonotic Zoo</h1></a>
+            <img class="microicon" src="img/viroscope.png" alt="Microscope icon">
+        </header>
+        
+        <div class="label">
+            <h3 class="name">Ebola</h3>
+            <div class="switch">  
+                <input type="checkbox" value="None" id="switch" onchange="toggle()" checked/>
+                <label for="switch"></label>
+            </div>
+        </div>
+        
+        <div id="window">
+            <img id="host" alt="Host: bat"
+                 src="img/cookedbats.jpg">
+            <div id="overlay">
+                <script type="text/javascript">
+                    function preload() {
+                        microbeImage = loadImage('img/covidmicrobes.png');
+                    }
+                </script>
+                <script src="script/sketch.js"></script>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var checkbox = document.getElementById("switch");
+            function toggle() {
+                if(checkbox.checked == true) {
+                    document.getElementById('host').style = 'filter: blur(10px); opacity: 0.8;';
+                    document.getElementById('window').style = 'background-color: chartreuse;';
+                    document.getElementById('overlay').style.opacity ="0.6";
+                }
+                else {
+                    document.getElementById('host').style = 'filter: blur(0px); opacity: 1;';
+                    document.getElementById('window').style = 'background-color: transparent;';
+                    document.getElementById('overlay').style.opacity ="0";
+                    }
+                };
+        </script>
+        
+        <div class="desc">
+            <h4>Full name: </h4>Zaire ebolavirus<br>
+            
+            <h4>Type: </h4>Ebolavirus<br>
+            
+            <h4>Vectors: </h4>Bats, humans, primates<br>
+            
+            <h4>Spreads via: </h4>Contact with bodily fluids containing the virus, eating infected flesh<br>
+            
+            <h4>Human Mortality: </h4>Between 25-90%, 50% die on average<br>
+            
+            <h4>Prevention: </h4>Only medical experts in complete coverage should interact with infected people, proper cooking and handling required for bushmeat
+            
+            <p>Ebolavirus causes the Ebola Virus Disease (EVD) in those infected. This incredibly deadly disease causes a hemorrhagic fever (it's likely to cause internal and external bleeding), diarrhea, and vomiting among other common symptoms. This occurs as the virus attacks and destroys just about every cell it comes in contact with, including immune cells. Most people who die of Ebola are actually killed by the rapid fluid loss the disease causes.</p>
+            
+            <p>EVD was discovered in 1976 near the Ebola River in the Democratic Republic of the Congo and has caused <a class="link" target="_blank" href="https://www.cdc.gov/vhf/ebola/history/chronology.html">21 outbreaks, the most recent being last year</a>. It seems to have originated in bats who suffer no ill effects from harboring the virus but can pass the disease to people though their bushmeat. There are five strains of the Ebolavirus with Zaire ebolavirus being the most common and deadly.</p>
+        </div>
+    </div>
+    <footer>
+        <p>Audrey Hufsmith &copy; 2020-2021</p>
+    </footer>
+    
+</body>
+</html>

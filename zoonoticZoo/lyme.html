@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Flavors&family=Rock+Salt&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Zoonotic Zoo: Lyme Disease</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html"><h1>Zoonotic Zoo</h1></a>
+            <img class="microicon" src="img/viroscope.png" alt="Microscope icon">
+        </header>
+        
+        <div class="label">
+            <h3 class="name">Lyme Disease</h3>
+            <div class="switch">  
+                <input type="checkbox" value="None" id="switch" onchange="toggle()" checked/>
+                <label for="switch"></label>
+            </div>
+        </div>
+        
+        <div id="window">
+            <img id="host" alt="Host: bat"
+                 src="img/ticklyme.jpg">
+            <div id="overlay">
+                <script type="text/javascript">
+                    function preload() {
+                        microbeImage = loadImage('img/covidmicrobes.png');
+                    }
+                </script>
+                <script src="script/sketch.js"></script>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var checkbox = document.getElementById("switch");
+            function toggle() {
+                if(checkbox.checked == true) {
+                    document.getElementById('host').style = 'filter: blur(10px); opacity: 0.8;';
+                    document.getElementById('window').style = 'background-color: chartreuse;';
+                    document.getElementById('overlay').style.opacity ="0.6";
+                }
+                else {
+                    document.getElementById('host').style = 'filter: blur(0px); opacity: 1;';
+                    document.getElementById('window').style = 'background-color: transparent;';
+                    document.getElementById('overlay').style.opacity ="0";
+                    }
+                };
+        </script>
+        
+        <div class="desc">
+            <h4>Full name: </h4>Lyme borreliosis<br>
+            
+            <h4>Type: </h4>Borrelia bacterium<br>
+            
+            <h4>Vectors: </h4>Ticks<br>
+            
+            <h4>Spreads via: </h4>Tick bites<br>
+            
+            <h4>Human Infections: </h4>360,000 per year, estimated<br>
+            
+            <h4>Prevention: </h4> Wearing insect spray, long sleeves and pants, avoiding tall grasses and brush, checking oneself and pets while removing any ticks after going outside
+            
+            <p>Lyme disease got it's name from the towns of Lyme and Old Lyme, Connecticut where there was a large number of children suffering from arthritis in 1975. Although the Borrelia bacteria have existed for a long time, the seemingly disconnected cause and symptoms made the disease difficult to identify. Most times an infected tick bite will lead to an indicative <a class="link" target="_blank" href="https://www.mayoclinic.org/diseases-conditions/lyme-disease/symptoms-causes/syc-20374651">bull's-eye rash</a>, but otherwise it can be difficult to tell when a person has become infected until they exhibit Lyme disease symptoms.</p>
+            
+            <p>Because Lyme disease is caused by bacteria it can be treated with antibiotics. However, the Borrelia bacteria are spirochetes, a corkscrew-shaped bacteria with the ability to lie dormant in the body for long periods of time. The bacteria will congregate in the joints, heart, and nervous system, damaging them over time, permanently if left untreated. Although rarely deadly, an infected person can continue to have their symptoms flare up for months or years after treatment, even when the disease is no longer detectable in the person's body. This has led many people to believe that <a class="link" target="_blank" href="https://www.niaid.nih.gov/diseases-conditions/chronic-lyme-disease">Lyme disease is a chronic condition</a>.</p>
+        </div>
+    </div>
+    <footer>
+        <p>Audrey Hufsmith &copy; 2020-2021</p>
+    </footer>
+    
+</body>
+</html>

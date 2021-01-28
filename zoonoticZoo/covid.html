@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Flavors&family=Rock+Salt&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Zoonotic Zoo: COVID-19</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html"><h1>Zoonotic Zoo</h1></a>
+            <img class="microicon" src="img/viroscope.png" alt="Microscope icon">
+        </header>
+        
+        <div class="label">
+            <h3 class="name">Corona Virus (COVID-19)</h3>
+            <div class="switch">  
+                <input type="checkbox" value="None" id="switch" onchange="toggle()" checked/>
+                <label for="switch"></label>
+            </div>
+        </div>
+        
+        <div id="window">
+            <img id="host" alt="Host: bat"
+                 src="img/deadbats.jpg">
+            <div id="overlay">
+                <script type="text/javascript">
+                    function preload() {
+                        microbeImage = loadImage('img/covidmicrobes.png');
+                    }
+                </script>
+                <script src="script/sketch.js"></script>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var checkbox = document.getElementById("switch");
+            function toggle() {
+                if(checkbox.checked == true) {
+                    document.getElementById('host').style = 'filter: blur(10px); opacity: 0.8;';
+                    document.getElementById('window').style = 'background-color: chartreuse;';
+                    document.getElementById('overlay').style.opacity ="0.6";
+                }
+                else {
+                    document.getElementById('host').style = 'filter: blur(0px); opacity: 1;';
+                    document.getElementById('window').style = 'background-color: transparent;';
+                    document.getElementById('overlay').style.opacity ="0";
+                    }
+                };
+        </script>
+        
+        <div class="desc">
+            <h4>Full name: </h4>SARS-CoV-2<br>
+            
+            <h4>Type: </h4>Corona virus<br>
+            
+            <h4>Vectors: </h4>Bats, humans, minks; The jump from bats to humans may have occured through a pangolin or snake<br>
+            
+            <h4>Spreads via: </h4>Airborn droplets of saliva or mucus expelled through coughing, sneezing, speaking, or singing<br>
+            
+            <h4>Human Infections: </h4>Over 100,000,000 infections worldwide*<br>
+            
+            <h4>Human Fatality: </h4>2,175,000+ deaths worldwide*<br>
+            
+            <h4>Prevention: </h4> Hand washing, mask wearing, social distancing, and vaccination
+            
+            <p>Corona viruses are a family of viruses that can cause mild to severe effects in those infected. Some corona viruses cause the common cold, while others can cause life-threatening illnesses such as <a class="link" href="https://www.cdc.gov/coronavirus/mers/index.html">Middle East Respritory Syndome (MERS)</a> and <a class="link" href="https://www.cdc.gov/SARS/index.html">Severe Acute Respritory Syndrome (SARS)</a>. COVID-19's unique features allow to to effectively bind to the ACE receptors that line the respiratory tract and are especially dense in the lungs.</p>
+            
+            <p>First discovered in Wuhan, China in 2019, COVID-19's ability to spread quickly and readily combined with modern-day global travel and the number of people who are asymptomatic carriers have allowed it to grow into the ongoing pandemic humanity is currently facing. It has at least one mutation that we know of which led to <a class="link" href="https://www.nbcnews.com/news/animal-news/here-s-why-denmark-culled-17-million-minks-now-plans-n1249610" target="_blank">Denmark culling its entire mink population</a>. Even in those recovered, it can have long lasting effects such as heart and lung damage.</p>
+            
+            <span style="font-size:12px;">*According to <a class="link" href="https://coronavirus.jhu.edu/map.html" target="_blank">John Hopkins University</a> retrieved January 28th, 2021.</span>
+        </div>
+    </div>
+    <footer>
+        <p>Audrey Hufsmith &copy; 2020-2021</p>
+    </footer>
+    
+</body>
+</html>

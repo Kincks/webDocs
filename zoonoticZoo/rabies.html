@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Flavors&family=Rock+Salt&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Zoonotic Zoo: Rabies</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html"><h1>Zoonotic Zoo</h1></a>
+            <img class="microicon" src="img/viroscope.png" alt="Microscope icon">
+        </header>
+        
+        <div class="label">
+            <h3 class="name">Rabies Virus</h3>
+            <div class="switch">  
+                <input type="checkbox" value="None" id="switch" onchange="toggle()" checked/>
+                <label for="switch"></label>
+            </div>
+        </div>
+        
+        <div id="window">
+            
+            <img id="host" alt="Host: bat"
+                 src="img/rabiddog.jpg">
+                        <div id="overlay">
+                <script type="text/javascript">
+                    function preload() {
+                        microbeImage = loadImage('img/covidmicrobes.png');
+                    }
+                </script>
+                <script src="script/sketch.js"></script>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var checkbox = document.getElementById("switch");
+            function toggle() {
+                if(checkbox.checked == true) {
+                    document.getElementById('host').style = 'filter: blur(10px); opacity: 0.8;';
+                    document.getElementById('window').style = 'background-color: chartreuse;';
+                    document.getElementById('overlay').style.opacity ="0.6";
+                }
+                else {
+                    document.getElementById('host').style = 'filter: blur(0px); opacity: 1;';
+                    document.getElementById('window').style = 'background-color: transparent;';
+                    document.getElementById('overlay').style.opacity ="0";
+                    }
+                };
+        </script> 
+        
+        <div class="desc">
+            <h4>Full name: </h4>Rabies lyssavirus<br>
+            
+            <h4>Type: </h4>Lyssavirus<br>
+            
+            <h4>Vectors: </h4>Nearly any mammal, but mostly passed to humans through dogs, cats, racoons, or bats<br>
+            
+            <h4>Spreads via: </h4>Being bitten or scratched by an infected creature, eating infected flesh<br>
+            
+            <h4>Human Fatality: </h4>59,000 deaths worldwide per year, mostly in Africa and Asia<br>
+            
+            <h4>Prevention: </h4>Avoiding wild and strangely behaving animals, vaccination if exposed
+            
+            <p>Rabies is human history's oldest recorded infectious disease, having been known about since at least 1500 BC. Although it can lay dormant in the body for months or even years, it will become fatal if left untreated. The disease caused by the Rabies virus is well known for its distinctive symptoms: aggression, psychosis, increased salivation, and hydrophobia (a fear of water). It can also manifest with lethergy and paralysis as its main symptoms instead, but is no less deadly.</p>
+            
+            <p>Rabies attacks the nervous system.</p>
+        </div>
+    </div>
+    <footer>
+        <p>Audrey Hufsmith &copy; 2020-2021</p>
+    </footer>
+    
+</body>
+</html>

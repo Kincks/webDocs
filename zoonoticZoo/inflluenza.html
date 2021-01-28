@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Flavors&family=Rock+Salt&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Zoonotic Zoo: Swine Flu</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html"><h1>Zoonotic Zoo</h1></a>
+            <img class="microicon" src="img/viroscope.png" alt="Microscope icon">
+        </header>
+        
+        <div class="label">
+            <h3 class="name">Swine Flu</h3>
+            <div class="switch">  
+                <input type="checkbox" value="None" id="switch" onchange="toggle()" checked/>
+                <label for="switch"></label>
+            </div>
+        </div>
+        
+        <div id="window">
+            
+            <img id="host" alt="Host: bat"
+                 src="img/farmedpigs.jpg">
+                        <div id="overlay">
+                <script type="text/javascript">
+                    function preload() {
+                        microbeImage = loadImage('img/covidmicrobes.png');
+                    }
+                </script>
+                <script src="script/sketch.js"></script>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var checkbox = document.getElementById("switch");
+            function toggle() {
+                if(checkbox.checked == true) {
+                    document.getElementById('host').style = 'filter: blur(10px); opacity: 0.8;';
+                    document.getElementById('window').style = 'background-color: chartreuse;';
+                    document.getElementById('overlay').style.opacity ="0.6";
+                }
+                else {
+                    document.getElementById('host').style = 'filter: blur(0px); opacity: 1;';
+                    document.getElementById('window').style = 'background-color: transparent;';
+                    document.getElementById('overlay').style.opacity ="0";
+                    }
+                };
+        </script>
+        
+        <div class="desc">
+            <h4>Full name: </h4>Influenza A virus subtype H1N1<br>
+            
+            <h4>Type: </h4>Influenza A virus<br>
+            
+            <h4>Vectors: </h4>Humans, pigs<br>
+            
+            <h4>Spreads via: </h4>Becomes airborn from coughing or sneezing, can be acquired from contact with an infected surface <br>
+            
+            <h4>Human Infections: </h4>Nearly 500,000 confirmed, at least 700,000,000 suspected<br>
+            
+            <h4>Human Fatality: </h4>18,500 confirmed, 284,000 suspected<br>
+            
+            <h4>Prevention: </h4>Hand washing, mask wearing, social distancing, vaccination
+            
+            <p>H1N1 is a mutation of the influenza virus that became the <a class="link" target="_blank" href="https://blogs.cdc.gov/publichealthmatters/2019/04/h1n1/">first pandemic of the new millenium</a> when the vaccines available were for more common strains. It was also responsible for the <a class="link" target="_blank" "https://blogs.cdc.gov/publichealthmatters/2018/05/1918-flu/">1918 Spanish flu pandemic</a> when it killed healthy young adults en masse. H1N1 isn't actually anymore deadly than other flu strains by itself, but poor preparedness and hygiene on pig farms has allowed it to continue to be an ongoing menace.</p>
+            
+            <p>There are many types of influenza viruses. Subtype A often infects the largest variety of host species, both birds and mammals, but H1N1 is the most common type to be found in pigs. In both pigs and humans H1N1 attacks the epithelial cells, or the lining, of the respiratory tract.</p>
+        </div>
+    </div>
+    <footer>
+        <p>Audrey Hufsmith &copy; 2020-2021</p>
+    </footer>
+    
+</body>
+</html>
